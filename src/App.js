@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Calculator, Screen, Keyboard, Key } from "./components/calculator";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Calculator>
+        <Screen />
+        <Keyboard>
+          <Key value={7} type="number" />
+          <Key value={8} type="number" />
+          <Key value={9} type="number" />
+          <Key value={"C"} type="operator" />
+          <Key value={4} type="number" />
+          <Key value={5} type="number" />
+          <Key value={6} type="number" />
+          <Key value={"X"} type="operator" />
+          <Key value={1} type="number" />
+          <Key value={2} type="number" />
+          <Key value={3} type="number" />
+          <Key value={"-"} type="operator" />
+          <Key value={0} type="number" />
+          <Key value={"/"} type="operator" />
+          <Key value={"="} type="operator" />
+          <Key value={"+"} type="operator" />
+        </Keyboard>
+      </Calculator>
+    </>
   );
 }
 
